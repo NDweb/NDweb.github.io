@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="DESCRIPTION" content="Текст с тенью и 3D объем"/>
+        <meta name="KEYWORDS" content="Текст. Надпись. Тени. 3D объем. Выпуклость." />
+            <title>Текст 3D объем</title>
+            <style>
+                    div {
+                        float: left;
+                        width: 33%;
+                    }
+                    p {
+                        text-align: center;
+                        font-size: 100px;
+                    }
+                    .green_plus {
+                        color: rgb(0, 255, 204);
+                        text-shadow: +1px +1px 1px rgb(102, 102, 153),
+                                     +2px +2px 1px rgb(0, 255, 255),
+                                     +3px +3px 1px rgb(102, 102, 153),
+                                     +4px +4px 1px rgb(0, 255, 204),
+                                     +5px +5px 1px blue,
+                                     +6px +6px 1px gray,
+                                     +7px +7px 1px yellow,
+                                     +8px +8px 1px gray,
+                                     +9px +9px 1px green,
+                                     +10px +10px 1px gray;
+                    }
+                    .green {
+                        color: rgb(0, 255, 204);
+                        text-shadow: 0 0 1px rgb(102, 102, 153),
+                                     +3px +3px 1px rgb(0, 255, 255),
+                                     +6px +6px 1px rgb(102, 102, 153),
+                                     +9px +9px 1px rgb(0, 255, 204),
+                                     +12px +12px 1px blue,
+                                     +13px +13px 1px gray,
+                                     +15px +15px 1px yellow,
+                                     +18px +18px 1px gray,
+                                     +21px +21px 1px green,
+                                     +24px +24px 1px gray;
+                    }
+                    .green_minus {
+                        color: rgb(0, 255, 204);
+                        text-shadow: -1px -1px 3px rgb(102, 102, 153),
+                                     -3px -3px 3px rgb(0, 255, 255),
+                                     -6px -6px 3px rgb(102, 102, 153),
+                                     -9px -9px 3px rgb(0, 255, 204),
+                                     -2px -12px 3px blue,
+                                     -13px -13px 3px gray,
+                                     -15px -15px 3px yellow,
+                                     -18px -18px 3px gray,
+                                     -21px -21px 3px green,
+                                     -24px -24px 3px gray;
+                    }
+                    .blue_plus_minus {
+                        color: rgb(0, 255, 255);
+                        text-shadow: +1px -1px 3px rgb(102, 102, 153),
+                                     +3px -3px 3px rgb(0, 255, 255),
+                                     +6px -6px 3px rgb(102, 102, 153),
+                                     +9px -9px 3px rgb(0, 255, 204),
+                                     +2px -12px 3px blue,
+                                     +13px -13px 3px gray,
+                                     +15px -15px 3px yellow,
+                                     +18px -18px 3px gray,
+                                     +21px -21px 3px green,
+                                     +24px -24px 3px gray;
+                    }
+                    .blue {
+                        color: rgb(0, 255, 255);
+                        text-shadow: 0px 0 3px rgb(102, 102, 153),
+                                     -3px -3px 3px rgb(0, 255, 255),
+                                     -6px -6px 3px rgb(102, 102, 153),
+                                     -9px -9px 3px rgb(0, 255, 204),
+                                     -2px -12px 3px blue,
+                                     -13px -13px 3px gray,
+                                     -15px -15px 3px yellow,
+                                     -18px -18px 3px gray,
+                                     -21px -21px 3px green,
+                                     -24px -24px 3px gray;;
+                    }
+                    .blue_minus_plus {
+                        color: rgb(0, 255, 255);
+                        text-shadow: -1px +1px 3px rgb(102, 102, 153),
+                                     -3px +3px 3px rgb(0, 255, 255),
+                                     -6px +6px 3px rgb(102, 102, 153),
+                                     -9px +9px 3px rgb(0, 255, 204),
+                                     -2px +12px 3px blue,
+                                     -13px +13px 3px gray,
+                                     -15px +15px 3px yellow,
+                                     -18px +18px 3px gray,
+                                     -21px +21px 3px green,
+                                     -24px +24px 3px gray;;
+                    }
+                    .lime_one {
+                        color: rgb(0, 255, 0);
+                        text-shadow: 0px 0px 1px rgb(102, 102, 153),
+                                     -3px -3px 1px rgb(0, 255, 255),
+                                     -6px -6px 1px rgb(102, 102, 153),
+                                     -9px -9px 1px rgb(0, 255, 204),
+                                     -2px -12px 1px blue,
+                                     -13px -13px 1px gray,
+                                     -15px -15px 1px yellow,
+                                     -18px -18px 1px gray,
+                                     -21px -21px 1px green,
+                                     -24px -24px 1px gray;
+                    }
+                    .lime_three {
+                        color: rgb(0, 255, 0);
+                        text-shadow: 0px 0px 3px rgb(102, 102, 153),
+                                     -3px -3px 3px rgb(0, 255, 255),
+                                     -6px -6px 3px rgb(102, 102, 153),
+                                     -9px -9px 3px rgb(0, 255, 204),
+                                     -2px -12px 3px blue,
+                                     -13px -13px 3px gray,
+                                     -15px -15px 3px yellow,
+                                     -18px -18px 3px gray,
+                                     -21px -21px 3px green,
+                                     -24px -24px 3px gray;
+                    }
+                    .lime {
+                        color: rgb(0, 255, 0);
+                        text-shadow: 3px 0px 0px gray;
+                    }
+            </style>
+    </head>
+    <body>
+        <div><p class="green_plus">ndweb</p>
+             <p class="green">ndweb</p>
+             <p class="green_minus">ndweb</p></div><br>
+        <div><p class="blue_plus_minus">ndweb</p>
+             <p class="blue">ndweb</p>
+             <p class="blue_minus_plus">ndweb</p></div><br>
+        <div><p class="lime_one">ndweb</p>
+             <p class="lime_three">ndweb</p>
+             <p class="lime">ndweb</p></div>
+    </body>
+</html>
+
