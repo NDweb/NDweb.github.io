@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="DESCRIPTION" content="Изображение с фильтрами"/>
+        <meta name="KEYWORDS" content="Изображения. Фильтры. Opasity" />
+    <title>Images with filters</title>
+    <style>
+        /*img{width: 100%;
+        }*/
+        @media screen and (orientation: portrait){
+            .wrapper {width: 100%;
+                      margin: 0 auto;
+            }
+            div {background-color: blue;
+                 width: 46%;
+                 margin: 1px;
+                 float: left;
+            }
+        }
+        @media screen and (orientation: landscape){
+            .wrapper {width: 100%;
+                      margin: 0 auto;
+            }
+            div {background-color: green;
+                 width: 13%;
+                 margin: 1px;
+                 float: left;
+            }
+        }
+        .opasity {filter: opacity(0.5);
+        }
+        .blur {filter: blur(2px);
+        }
+        .brightness {filter: brightness(50%);
+        }
+        .contrast {filter: contrast(0.5);
+        }
+        .drop-shadow {filter: drop-shadow(0 0 3px yellow);
+        }
+        .gray-scale {filter: grayscale(0.5);
+        }
+        .hue-rotate {filter: hue-rotate(45deg);
+        }
+        .invert {filter: invert(0.7);
+        }
+        .saturate {filter: saturate(0.7);
+        }
+        .sepia {filter: sepia(0.5);
+        }
+        .sepia_1 {filter: sepia(1.0);
+        }
+        .gray-scale_1 {filter: grayscale(1.0);
+        }
+        .saturate_1 {filter: saturate(1.0);
+        }
+        img:hover {filter: none;
+        }
+    </style>
+</head>
+<body>
+    <wrapper>
+        <div class="1"><img src="img/strawberry.png"><br>Original</div>
+        <div class="2"><img class="opasity" src="img/strawberry.png"><br>Opasity 50%</div>
+        <div class="3"><img class="blur" src="img/strawberry.png"><br>Blur 2px</div>
+        <div class="4"><img class="brightness" src="img/strawberry.png"><br>Brightness 50%</div>
+        <div class="5"><img class="contrast" src="img/strawberry.png"><br>Contrast 50%</div>
+        <div class="6"><img class="drop-shadow" src="img/strawberry.png"><br>Drop-shadow(0 0 3px yellow)</div>
+        <div class="7"><img class="gray-scale" src="img/strawberry.png"><br>Gray-scale 50%</div>
+        <div class="8"><img class="hue-rotate" src="img/strawberry.png"><br>Hue-rotate 45deg</div>
+        <div class="9"><img class="invert" src="img/strawberry.png"><br>Invert 70%</div>
+        <div class="10"><img class="saturate" src="img/strawberry.png"><br>Saturate 70%</div>
+        <div class="11"><img class="sepia" src="img/strawberry.png"><br>Sepia 50%</div>
+        <div class="12"><img class="sepia_1" src="img/strawberry.png"><br>Sepia 100%</div>
+        <div class="13"><img class="gray-scale_1" src="img/strawberry.png"><br>Gray-scale 100%</div>
+        <div class="14"><img class="saturate_1" src="img/strawberry.png"><br>Saturate 100%</div>
+    </wrapper>
+</body>
+</html>
