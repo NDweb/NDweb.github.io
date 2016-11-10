@@ -9,6 +9,10 @@
         img{
             width: 100%;
         }
+        div {
+            white-space: nowrap; /* запрещает перенос строк */
+            overflow: hidden; /* обрезает все, что не помещается в область */
+        }
         @media screen and (orientation: portrait){
             .wrapper {
                 width: 100%;
@@ -84,7 +88,7 @@
         <div class="3"><img class="blur" src="img/strawberry.png"><br>Blur 2px</div>
         <div class="4"><img class="brightness" src="img/strawberry.png"><br>Brightness 50%</div>
         <div class="5"><img class="contrast" src="img/strawberry.png"><br>Contrast 50%</div>
-        <div class="6"><img class="drop-shadow" src="img/strawberry.png"><br>Drop-shadow</div>
+        <div class="6"><img class="drop-shadow" src="img/strawberry.png"><br>Drop-shadow (0 0 3px yellow)</div>
         <div class="7"><img class="gray-scale" src="img/strawberry.png"><br>Gray-scale 50%</div>
         <div class="8"><img class="hue-rotate" src="img/strawberry.png"><br>Hue-rotate 45deg</div>
         <div class="9"><img class="invert" src="img/strawberry.png"><br>Invert 70%</div>
