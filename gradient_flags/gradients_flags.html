@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="DESCRIPTION" content="Линейный градиент. Linear-gradient."/>
+    <meta name="KEYWORDS" content="Градиент. Linear-gradient." />
+    <title>Gradients</title>
+    <style>
+        .wrapper {
+            width: 1024px;
+            height: auto;
+            overflow: auto;
+            margin: 0 auto;
+        }
+        .flag {
+            width: 250px;
+            height: 160px;
+            float: left;
+            margin: 0 2px;
+            text-align: center;
+            font: 12px sans-serif;
+        }
+        .flag div {
+            width: 230px;
+            height: 140px;
+            box-shadow: 1px 1px 1px 1px gray;
+        }
+        .ukraine {
+            background: linear-gradient(180deg, blue 50%, yellow 50%);
+        }
+        .poland {
+            background: linear-gradient(180deg, white 50%, red 50%);
+        }
+        .netherlands {
+            background: linear-gradient(180deg, red 33%, white 33%, white 66%, blue 66%, blue 100%);
+        }
+        .hungary {
+            background: linear-gradient(180deg, red 33%, white 33%, white 66%, green 66%, green 100%);
+        }
+        .france {
+            background: linear-gradient(to right, red 33%, white 33%, white 66%, blue 66%, blue 100%);
+        }
+        .belgium{
+            background: linear-gradient(to right, black 33%, yellow 33%, yellow 66%, red 66%, red 100%);
+        }
+        .egypt {
+            background: url(img/gerb_egypt_small.png) no-repeat center,
+            linear-gradient(180deg, red 33%, white 33%, white 66%, black 66%, black 100%);
+        }
+        .portugal {
+            background: url(img/gerb_portugal_small.png) 60px no-repeat,
+             linear-gradient(to right, green 40%, red 40%, red 100%);
+        }
+        .serbia {
+            background: url(img/gerb_serbia.png) 50px 14px no-repeat,
+            linear-gradient(180deg, red 33%, blue 33%, blue 66%, white 66%, white 100%);
+        }
+        .slovakia {
+            background: url(img/gerb_slovakia.png) 32px 30px no-repeat,
+            linear-gradient(180deg, white 33%, blue 33%, blue 66%, red 66%, red 100%);
+        }
+        .croatia {
+             background: url(img/gerb_croatia.png) 74px 16px no-repeat,
+              linear-gradient(180deg, red 33%, white 33%, white 66%, blue 66%, blue 100%);
+        }
+        .greece {
+            background: url(img/gerb_greece.png) no-repeat,
+            linear-gradient(180deg, blue 11%, white 11%, white 22%, blue 22%, blue 33%, white 33%, white 44%, blue 44%, blue 55%, white 55%, white 66%, blue 66%, blue 77%, white 77%, white 88%, blue 88%, blue 100%);
+        }
+        .turkey{
+            background: url(img/gerb_turkey.png) 50px 30px no-repeat,
+            red;
+        }
+        .japan {
+             background-image: radial-gradient(circle, red 30%, white 30%, white 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="flag"><div class="ukraine"></div>Ukraine</div>
+        <div class="flag"><div class="poland"></div>Poland</div>
+        <div class="flag"><div class="netherlands"></div>Netherlands</div>
+        <div class="flag"><div class="hungary"></div>Hungary</div>
+        <div class="flag"><div class="france"></div>France</div>
+        <div class="flag"><div class="belgium"></div>Belgium</div>
+        <div class="flag"><div class="egypt"></div>Egypt</div>
+        <div class="flag"><div class="portugal"></div>Portugal</div>
+        <div class="flag"><div class="serbia"></div>Serbia</div>
+        <div class="flag"><div class="slovakia"></div>Slovakia</div>
+        <div class="flag"><div class="croatia"></div>Croatia</div>
+        <div class="flag"><div class="greece"></div>Greece</div>
+        <div class="flag"><div class="turkey"></div>Turkey</div>
+        <div class="flag"><div class="japan"></div>Japan</div>
+    </div>
+</body>
+</html>
