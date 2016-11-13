@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="DESCRIPTION" content="Линейный повторяющийся градиент. Repeating-linear-gradient"/>
+    <meta name="KEYWORDS" content="Градиент. Linear-gradient. Линейный повторяющийся градиент. Repeating-linear-gradient. Тетрадь в косую линейку." />
+    <title>Gradient Notebook with slanting lines</title>
+    <style>
+        .wrapper {
+            height: 800px;
+            width: 560px;
+            margin: 0 auto;
+            background: repeating-linear-gradient(transparent, transparent 19px, #6666CC 19px, #6666CC 20px, transparent 20px, transparent 49px, #6666CC 50px, #6666CC 50px),
+                        repeating-linear-gradient(110deg, transparent, transparent 39px, #6666CC 40px),
+                        linear-gradient(90deg, transparent, transparent 480px, red 480px, red 481px, transparent 481px, transparent 560px);
+            box-shadow: 1px 1px 2px 1px gray;
+            font-style: italic;
+            font-size: 22px;
+            line-height: 50px;
+            color: #3300CC;
+        }
+        .text {
+            padding: 86px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="text">Домашнее задание:<br>
+            Сделать страницу из тетради в косую линейку с полями и рукописным текстом.
+        </div>
+    </div>
+</body>
+</html>

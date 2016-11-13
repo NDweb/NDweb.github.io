@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="DESCRIPTION" content="Радиальный повторяющийся градиент. Radiant-linear-gradient"/>
+    <meta name="KEYWORDS" content="Градиент. Radiant-gradient. Радиальный повторяющийся градиент. Radiant-linear-gradient. Мишень." />
+    <title>Gradient Target</title>
+    <style>
+        .wrapper {
+            height: 800px;
+            width: 800px;
+            margin: 0 auto;
+            background-color: black;
+        }
+        .target {
+            height: 800px;
+            width: 800px;
+            border-radius: 800px;
+            background: repeating-radial-gradient(circle, white, white 38px, black 39px, black 40px);
+            box-shadow: 1px 1px 2px 1px gray;
+        }
+        img {
+            margin: 320px;
+            width: 160px;
+            height: 160px;
+            border-radius: 160px;
+            box-shadow: 1px 1px 1px 1px black;
+        }
+        .numbers {
+            font: 22px bold monospace;
+            font-family: Arial, Helvetica, Georgia, san-serif;
+            letter-spacing: 11px;
+        }
+        .numbers_top {
+            margin-top: -800px;
+            margin-left: 395px;
+            height: 320px;
+            line-height: 40px;
+        }
+        .numbers_left {
+            float: left;
+            margin-left: 15px;
+            margin-top: 60px;
+            width: 400px;
+        }
+        .numbers_right {
+            float: right;
+            margin-right: -90px;
+            margin-top: 60px;
+            width: 400px;
+        }
+        .numbers_down {
+            margin-top: 160px;
+            margin-left: 395px;
+            height: 320px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="target">
+            <img src="img/target.jpg">
+            <div class="numbers">
+                    <div class="numbers_top">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8</div>
+                    <div>
+                    <div class="numbers_left">1 2 3 4 5 6 7 8</div>
+                    <div class="numbers_right">8 7 6 5 4 3 2 1</div>
+                    </div>
+                    <div class="numbers_down">8<br>7<br>6<br>5<br>4<br>3<br>2<br>1</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
