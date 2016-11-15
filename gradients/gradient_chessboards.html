@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="DESCRIPTION" content="Линейный градиент. Linear-gradient."/>
+    <meta name="KEYWORDS" content="CSS. Градиент. Linear-gradient. Шахматная доска."/>
+    <title>Gradient Chess board</title>
+    <style>
+        body{
+           text-align: center;
+            font-family: Arial;
+        }
+        h1 {
+            color: blue;
+        }
+            h3 {
+            color: red;
+        }
+        .good {
+            color: green;
+        }
+        .chessboard1 {
+           height: 800px;
+            width: 800px;
+            margin: 0 auto;
+            box-shadow: 1px 1px 1px 1px gray;
+        }
+        .chessboard1_white {
+            width: 800px;
+            height: 100px;
+            background: linear-gradient(90deg, white 100px, black 100px, black 200px, white 200px, white 300px, black 300px, black 400px, white 400px, white 500px, black 500px, black 600px, white 600px, white 700px, black 700px, black 800px);
+        }
+        .chessboard1_black {
+            width: 800px;
+            height: 100px;
+            background: linear-gradient(90deg, black 100px, white 100px, white 200px, black 200px, black 300px, white 300px, white 400px, black 400px, black 500px, white 500px, white 600px, black 600px, black 700px, white 700px, white 800px);
+        }
+
+        .chessboard2 {
+            height: 800px;
+            width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 1px 1px 1px 1px gray;
+            background: repeating-linear-gradient(45deg, black 0%, black 25%, transparent 25%, transparent 75%, black 75%, black 100%),
+                        repeating-linear-gradient(-45deg, black 0%, black 25%, transparent 25%, transparent 75%, black 75%, black 100%);
+            background-size: 200px 200px;
+        }
+
+        .chessboard3 {
+            height: 800px;
+            width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 1px 1px 1px 1px gray;
+            background: linear-gradient(45deg, black, black 25%, transparent 25%, transparent 74.5%, black 75%, black),
+                        linear-gradient(45deg, black, black 25%, transparent 25%, transparent 74.5%, black 75%, black);
+            background-size: 200px 200px;
+            background-position: 0 0, 100px 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <header><h1>Шахматная доска: применение линейного градиента CSS</h1></header>
+
+    <h3>1.Как не нужно делать: использованы 8 градиентных контейнеров</h3>
+    <div class="chessboard1">
+        <div class="chessboard1_white"></div>
+        <div class="chessboard1_black"></div>
+        <div class="chessboard1_white"></div>
+        <div class="chessboard1_black"></div>
+        <div class="chessboard1_white"></div>
+        <div class="chessboard1_black"></div>
+        <div class="chessboard1_white"></div>
+        <div class="chessboard1_black"></div>
+    </div>
+
+    <h3>2. Как не нужно делать: использован 1 контейнер</h3>
+    <div class="chessboard2"></div>
+
+    <h3 class="good">3. Как правильно сделать шахматную доску с использованием 1 контейнера:</h3>
+    <div class="chessboard3"></div>
+
+</body>
+</html>
