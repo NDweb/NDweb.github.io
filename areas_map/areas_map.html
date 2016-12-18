@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="DESCRIPTION" content="Карта для изображений, зоны карты - ссылки"/>
+    <meta name="KEYWORDS" content="карта изображений, map, area"/>
+    <title>Areas</title>
+    <style>
+        .wrapper {
+            margin: 0 auto;
+            width: 1024px;
+            color: blue;
+            font-family: Arial;
+            text-align: center;
+        }
+        .dz {
+            font: bold italic 110% serif;
+        }
+        area {
+            display: inline-block;
+        }
+        area:visited {
+            border: 5px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="dz">ДЗ: Нарисовать объект, при наведеннии и нажатии на определенные зоны которого выполняется переход к страницам с соответствующими пояснениями этих зон.  При посещении этих зон сами зоны будут менять цвет.
+        </div>
+        <h1>Чувства и гормоны</h1>
+        <a href="http://forum.df2.ru/lofiversion/index.php/t32236.html">Источник 1</a>
+        <a href="http://www.slideshare.net/OlgaShatova/ss-54661569">Источник 2</a>
+
+        <div class="person">
+            <h1>Человек</h1>
+            <p><img src="img/effect_gs1.png" usemap="#person_map"></p>
+            <p><map id="person_map">
+                <area shape="rect" coords="21,30,118,260" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D0%B8%D1%8F" alt="Мания">
+                <area shape="rect" coords="129,30,226,260" href="https://ru.wikipedia.org/wiki/%D0%A2%D1%80%D0%B5%D0%B2%D0%BE%D0%B3%D0%B0" alt="Тревога">
+                <area shape="rect" coords="246,30,366,260" href="https://ru.wikipedia.org/wiki/%D0%A1%D1%87%D0%B0%D1%81%D1%82%D1%8C%D0%B5" alt="Счастье">
+                <area shape="rect" coords="386,30,502,260" href="https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81_(%D1%87%D1%83%D0%B2%D1%81%D1%82%D0%B2%D0%BE)" alt="Интерес">
+                <area shape="rect" coords="532,30,626,260" href="https://ru.wikipedia.org/wiki/%D0%93%D0%BD%D0%B5%D0%B2" alt="Гнев">
+                <area shape="rect" coords="639,30,764,260" href="https://ru.wikipedia.org/wiki/%D0%90%D0%B7%D0%B0%D1%80%D1%82" alt="Азарт">
+                <area shape="rect" coords="28,282,249,508" href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D0%B5%D1%81%D1%81" alt="Стресс">
+                <area shape="rect" coords="271,282,498,508" href="https://ru.wikipedia.org/wiki/%D0%94%D0%B5%D0%BF%D1%80%D0%B5%D1%81%D1%81%D0%B8%D1%8F" alt="Депрессия">
+                <area shape="rect" coords="620,282,799,508" href="https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D0%B0%D1%85" alt="Страх">
+                <area shape="rect" coords="27,530,195,760" href="https://ru.wikipedia.org/wiki/%D0%90%D0%BF%D0%B0%D1%82%D0%B8%D1%8F" alt="Апатия">
+                <area shape="rect" coords="200,530,316,760" href="https://ru.wikipedia.org/wiki/%D0%AD%D0%B9%D1%84%D0%BE%D1%80%D0%B8%D1%8F" alt="Эйфория">
+                <area shape="rect" coords="325,530,500,760" href="https://ru.wikipedia.org/wiki/%D0%9E%D0%B7%D0%B0%D1%80%D0%B5%D0%BD%D0%B8%D0%B5" alt="Озарение">
+                <area shape="rect" coords="515,530,620,760" href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D1%83%D1%81%D1%82%D1%8C" alt="Грусть">
+                <area shape="rect" coords="626,530,790,760" href="http://www.psyline.ru/ask183.htm" alt="Раздражение">
+
+                <area shape="rect" coords="826,111,1013,233" href="https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D1%84%D0%B0%D0%BC%D0%B8%D0%BD" alt="Дофамин">
+                <area shape="rect" coords="826,246,1013,267" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%80%D0%BE%D1%82%D0%BE%D0%BD%D0%B8%D0%BD" alt="Серотонин">
+                <area shape="rect" coords="826,283,1013,305" href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D0%B4%D0%BE%D1%80%D1%84%D0%B8%D0%BD%D1%8B" alt="Эндорфин">
+                <area shape="rect" coords="826,319,1013,341" href="https://ru.wikipedia.org/wiki/%D0%9E%D0%BA%D1%81%D0%B8%D1%82%D0%BE%D1%86%D0%B8%D0%BD" alt="Окситоцин">
+                <area shape="rect" coords="826,352,1013,375" href="https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D1%80%D0%B0%D0%B4%D1%80%D0%B5%D0%BD%D0%B0%D0%BB%D0%B8%D0%BD" alt="Норадреналин">
+                <area shape="rect" coords="826,387,1013,412" href="https://ru.wikipedia.org/wiki/%D0%90%D0%B4%D1%80%D0%B5%D0%BD%D0%B0%D0%BB%D0%B8%D0%BD" alt="Адреналин">
+                <area shape="rect" coords="826,424,1013,447" href="https://ru.wikipedia.org/wiki/%D0%AD%D1%81%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D0%BE%D0%BB" alt="Эстрадиол">
+                <area shape="rect" coords="826,468,1013,481" href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D1%81%D1%82%D0%B5%D1%80%D0%BE%D0%BD" alt="Тестостерон">
+                <area shape="rect" coords="826,494,1013,515" href="http://estet-portal.com/articles/interesnye-fakty/gormony-feniletilamin-i-endofin-vechnaya-lyubov" alt="Фенилэтиламин">
+                <area shape="rect" coords="826,531,1013,553" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BB%D0%B0%D1%82%D0%BE%D0%BD%D0%B8%D0%BD" alt="Мелатонин">
+                <area shape="rect" coords="826,565,1013,587" href="https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D1%82%D0%B8%D0%B4%D0%B8%D1%83%D1%80%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BC%D0%BE%D0%BD" alt="Вазопрессин">
+                <area shape="rect" coords="826,600,1013,622" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BE%D0%BD" alt="Прогестерон">
+                <area shape="rect" coords="826,637,1013,657" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BD" alt="Пролактин">
+                <area shape="rect" coords="826,671,1013,693" href="https://ru.wikipedia.org/wiki/%D0%90%D1%86%D0%B5%D1%82%D0%B8%D0%BB%D1%85%D0%BE%D0%BB%D0%B8%D0%BD" alt="Ацетилхолин">
+                <area shape="rect" coords="826,707,1013,727" href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D1%80%D0%BE%D0%BA%D1%81%D0%B8%D0%BD" alt="Тироксин">
+                </map>
+            </p>
+        </div>
+
+        <div class="relationship">
+            <h1>Отношения между людьми</h1>
+            <p><img src="img/effect_gs2.png" usemap="#relationship_map"></p>
+            <p><map id="relationship_map">
+                <area shape="rect" coords="22,30,210,260" href="https://ru.wikipedia.org/wiki/%D0%A3%D0%B2%D0%B5%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C" alt="Уверенность">
+                <area shape="rect" coords="228,30,398,260" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B8%D0%B2%D1%8F%D0%B7%D0%B0%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C" alt="Привязанность">
+                <area shape="rect" coords="411,30,561,260" href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%B4%D1%87%D0%B8%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5" alt="Подчинение">
+                <area shape="rect" coords="577,30,756,260" href="https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D0%BC%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5" alt="Доминирование">
+
+                <area shape="rect" coords="20,278,264,506" href="https://ru.wikipedia.org/wiki/%D0%92%D0%BB%D1%8E%D0%B1%D0%BB%D1%91%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C" alt="Влюбленность">
+                <area shape="rect" coords="304,278,542,506" href="https://ru.wikipedia.org/wiki/%D0%92%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5" alt="Влечение">
+                <area shape="rect" coords="560,278,815,506" href="http://www.psychologies.ru/glossary/19/udovletvorennost/" alt="Удовлетворенность">
+
+                <area shape="rect" coords="176,531,365,757" href="https://ru.wikipedia.org/wiki/%D0%9B%D1%8E%D0%B1%D0%BE%D0%B2%D1%8C" alt="Любовь">
+                <area shape="rect" coords="396,533,673,757" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D0%BD%D0%BA%D1%82" alt="Материнское чувство">
+
+
+                <area shape="rect" coords="826,111,1013,233" href="https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D1%84%D0%B0%D0%BC%D0%B8%D0%BD" alt="Дофамин">
+                <area shape="rect" coords="826,246,1013,267" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D1%80%D0%BE%D1%82%D0%BE%D0%BD%D0%B8%D0%BD" alt="Серотонин">
+                <area shape="rect" coords="826,283,1013,305" href="https://ru.wikipedia.org/wiki/%D0%AD%D0%BD%D0%B4%D0%BE%D1%80%D1%84%D0%B8%D0%BD%D1%8B" alt="Эндорфин">
+                <area shape="rect" coords="826,319,1013,341" href="https://ru.wikipedia.org/wiki/%D0%9E%D0%BA%D1%81%D0%B8%D1%82%D0%BE%D1%86%D0%B8%D0%BD" alt="Окситоцин">
+                <area shape="rect" coords="826,352,1013,375" href="https://ru.wikipedia.org/wiki/%D0%9D%D0%BE%D1%80%D0%B0%D0%B4%D1%80%D0%B5%D0%BD%D0%B0%D0%BB%D0%B8%D0%BD" alt="Норадреналин">
+                <area shape="rect" coords="826,387,1013,412" href="https://ru.wikipedia.org/wiki/%D0%90%D0%B4%D1%80%D0%B5%D0%BD%D0%B0%D0%BB%D0%B8%D0%BD" alt="Адреналин">
+                <area shape="rect" coords="826,424,1013,447" href="https://ru.wikipedia.org/wiki/%D0%AD%D1%81%D1%82%D1%80%D0%B0%D0%B4%D0%B8%D0%BE%D0%BB" alt="Эстрадиол">
+                <area shape="rect" coords="826,468,1013,481" href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D1%81%D1%82%D0%B5%D1%80%D0%BE%D0%BD" alt="Тестостерон">
+                <area shape="rect" coords="826,494,1013,515" href="http://estet-portal.com/articles/interesnye-fakty/gormony-feniletilamin-i-endofin-vechnaya-lyubov" alt="Фенилэтиламин">
+                <area shape="rect" coords="826,531,1013,553" href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BB%D0%B0%D1%82%D0%BE%D0%BD%D0%B8%D0%BD" alt="Мелатонин">
+                <area shape="rect" coords="826,565,1013,587" href="https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D1%82%D0%B8%D0%B4%D0%B8%D1%83%D1%80%D0%B5%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9_%D0%B3%D0%BE%D1%80%D0%BC%D0%BE%D0%BD" alt="Вазопрессин">
+                <area shape="rect" coords="826,600,1013,622" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%B3%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BE%D0%BD" alt="Прогестерон">
+                <area shape="rect" coords="826,637,1013,657" href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D0%BB%D0%B0%D0%BA%D1%82%D0%B8%D0%BD" alt="Пролактин">
+                <area shape="rect" coords="826,671,1013,693" href="https://ru.wikipedia.org/wiki/%D0%90%D1%86%D0%B5%D1%82%D0%B8%D0%BB%D1%85%D0%BE%D0%BB%D0%B8%D0%BD" alt="Ацетилхолин">
+                <area shape="rect" coords="826,707,1013,727" href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B8%D1%80%D0%BE%D0%BA%D1%81%D0%B8%D0%BD" alt="Тироксин">
+                </map>
+            </p>
+        </div>
+
+        <div class="job">
+            <h1>Работа</h1>
+            <p><img src="img/job.jpg" usemap="#job_map"></p>
+            <p><map id="job_map">
+                    <area shape="rect" coords="416,13,636,71" href="https://ru.wikipedia.org/wiki/%D0%94%D0%BE%D1%84%D0%B0%D0%BC%D0%B8%D0%BD" alt="Дофамин">
+                    <area shape="circle" coords="557,464,768" href="https://ru.wikipedia.org/wiki/%D0%A1%D1%87%D0%B0%D1%81%D1%82%D1%8C%D0%B5" alt="Счастье">
+                    <area shape="circle" coords="708,462,772" href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0" alt="Работа">
+                </map>
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>

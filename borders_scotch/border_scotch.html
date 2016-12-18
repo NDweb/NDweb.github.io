@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="DESCRIPTION" content="Изображения с рамками, приклеенные с помощью скотча"/>
+    <meta name="KEYWORDS" content="изображения, рамки, скотч, borders, scotch, content"/>
+    <title>Borders&scotch</title>
+    <style>
+        .wrapper {
+            margin: 0 auto;
+            width: 1024px;
+            height: 1024px;
+            background-color: lightgreen;
+        }
+        .images {
+            display: inline-block;
+            margin: 5px;
+        }
+        .bord1 {
+            width: 200px;
+            height: 200px;
+            color: blue;
+            font-family: Arial;
+            border: 15px solid black;
+            border-image: url(img/gold.jpg) 15 15 15 15;
+            background-image: url(img/kitty.jpg);
+            background-repeat: no-repeat;
+            background-size: 105%;
+            padding: 5px;
+        }
+        .bord2 {
+            width: 200px;
+            height: 200px;
+            color: blue;
+            font-family: Arial;
+            border: 15px solid black;
+            border-image: url(img/strawberry.jpg) 20 20 20 20;
+            background-image: url(img/ladybug.jpg);
+            background-repeat: no-repeat;
+            background-size: 105%;
+            padding: 5px;
+        }
+        .bord3 {
+            width: 200px;
+            height: 200px;
+            color: blue;
+            font-family: Arial;
+            border: 15px solid black;
+            border-image: url(img/bordo.jpg) 15 15 15 15;
+            background-image: url(img/lotos.jpg);
+            background-repeat: no-repeat;
+            background-size: 105%;
+            padding: 5px;
+        }
+        .bord4 {
+            width: 200px;
+            height: 200px;
+            color: blue;
+            font-family: Arial;
+            border: 15px solid black;
+            border-image: url(img/snow.jpg) 15 15 15 15;
+            background-image: url(img/snowfl.jpg);
+            background-repeat: no-repeat;
+            background-size: 105%;
+            padding: 5px;
+        }
+        p::before {
+            content: "";
+            width: 180px;
+            height: 40px;
+            background-color: white;
+            display: inline-block;
+            filter: opacity(50%);
+            position: relative;
+            top: -15%;
+            left: 15px;
+        }
+        .bord2::after {
+            content: "";
+            width: 180px;
+            height: 40px;
+            background-color: white;
+            display: inline-block;
+            filter: opacity(50%);
+            position: relative;
+            bottom: -75%;
+            left: 15px;
+        }
+        .bord3::before {
+            content: "";
+            width: 80px;
+            height: 40px;
+            background-color: white;
+            display: inline-block;
+            filter: opacity(50%);
+            position: relative;
+            top: -10%;
+            left: 160px;
+            transform: rotate(45deg);
+        }
+        .bord3::after {
+            content: "";
+            width: 80px;
+            height: 40px;
+            background-color: white;
+            display: inline-block;
+            filter: opacity(50%);
+            position: relative;
+            bottom: -90%;
+            left: -120px;
+            transform: rotate(45deg);
+        }
+        .dz {
+            width: 400px;
+            padding: 20px;
+            font: bold italic 110% serif;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="dz">Задание:<br> 2-4 картинки з нестандартными рамочками.
+        Визуально картинки приклеены c помощью полупрозрачного скотча.
+        Скотч не является картинкой (с помощью before-after).
+        Скотч занимает не более 18% высоты картинки.
+        </div>
+
+        <div class="images">
+            <p class="bord1"></p>
+        </div>
+
+         <div class="images">
+            <p class="bord2"></p>
+        </div>
+
+         <div class="images">
+            <p class="bord3"></p>
+        </div>
+
+         <div class="images">
+            <p class="bord4"></p>
+        </div>
+
+    </div>
+</body>
+</html>

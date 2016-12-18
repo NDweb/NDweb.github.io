@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="DESCRIPTION" content="Положение фонового изображения, спрайт-модель, контент (before, after)"/>
+    <meta name="KEYWORDS" content="положение фонового изображения, background-position, спрайты, sprites, контент, content, before, after"/>
+    <title>Dzen</title>
+    <style>
+        .wrapper {
+            margin: 0 auto;
+            width: 1024px;
+            border: 2px solid lightblue;
+        }
+        .dz {
+            font: bold italic 110% serif;
+            color: blue;
+            margin: 20px;
+        }
+        .task1 {
+            margin: 20px;
+        }
+        button {
+            border: 2px solid gray;
+        }
+        button:hover {
+            border: 5px solid blue;
+            border-top-right-radius: 5px;
+        }
+        .par1 {
+            width: 600px;
+            height: auto;
+            background-image: url(img/sov_sec.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            border: 1px solid red;
+            margin: 20px;
+        }
+        .par2 {
+            width: 600px;
+            height: auto;
+            background-image: url(img/copy_right.jpg);
+            background-size: 50%;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            border: 1px solid blue;
+            margin: 20px;
+        }
+        .par3 {
+            width: 600px;
+            height: auto;
+            background-image: url(img/akciya.png);
+            background-size: 30%;
+            background-position: 0% 20%;
+            background-repeat: no-repeat;
+            border: 1px solid red;
+            margin: 20px;
+        }
+        .par4 {
+            width: 400px;
+            height: auto;
+            background-image: url(img/quality.png);
+            background-size: 50%;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            border: 1px solid red;
+            margin: 20px;
+        }
+        .par5 {
+            width: 400px;
+            height: auto;
+            background-image: url(img/ded_moroz.png);
+            background-size: 30%;
+            background-position: 90% 90%;
+            background-repeat: no-repeat;
+            border: 1px solid blue;
+            margin: 20px;
+        }
+        .two {
+            background-image: url(img/1234567890.png);
+            background-position: 260px 0px;
+            height: 75px;
+            width: 52px;
+        }
+        .zero {
+            background-image: url(img/1234567890.png);
+            background-position: 104px 70px;
+            height: 75px;
+            width: 52px;
+        }
+        .one {
+            background-image: url(img/1234567890.png);
+            background-position: 0px 0px;
+            height: 75px;
+            width: 52px;
+        }
+        .six {
+            background-image: url(img/1234567890.png);
+            background-position: 52px 0px;
+            height: 75px;
+            width: 52px;
+        }
+        .task3 p {
+            display: inline-block;
+        }
+        .task3 {
+            margin: 20px;
+        }
+        .bord {
+            width: 400px;
+            height: auto;
+            color: blue;
+            font-family: Arial;
+            border: 15px solid gray;
+            border-image: url(img/image_dream.jpg) 15 15 15 15;
+            padding: 5px;
+            margin: 20px;
+        }
+        .advert {
+            background-image: url(img/sn.png);
+            background-position: right;
+            background-attachment: fixed;
+            background-size: 50%;
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            color: blue;
+            font-family: Arial;
+            display: inline-block;
+            margin: 20px;
+        }
+        .arrows {
+            margin: 20px;
+        }
+        .arrows p:after {
+            content: "\2192";
+            color: blue;
+        }
+        .arrows p:before {
+            content: url(img/tea_2020.png);
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+    <div class="task1">
+        <div class="dz">1) сделать кнопку с произвольным текстом, которая при наведении на нее будет нажиматься:</div>
+        <form>
+            <button>Попробуйте навести и будет вам дзен*!</button>
+        </form>
+        * - домашнее задание по версии Т9 телефона Тани)
+    </div>
+
+    <div class="task2">
+        <div class="dz">2) разобраться с параграфами:</div>
+        <p class="par1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultrices enim aliquet tempus vestibulum. Sed iaculis et velit nec venenatis. Aenean tincidunt urna vel ex tristique viverra. Ut fermentum, velit sed ullamcorper consectetur, nibh quam accumsan quam, in sollicitudin enim turpis nec nunc. Sed quis sollicitudin lacus. Nunc ut est quis velit rutrum tincidunt vel id ligula. Ut eu gravida tortor. Duis dui ante, condimentum at gravida ut, tristique sed lacus. Quisque a mollis urna. Sed at ante non justo consequat gravida. Donec porta massa a orci euismod, ac tincidunt quam eleifend. Phasellus ultricies blandit arcu at placerat. Morbi eleifend, ipsum quis congue viverra, mauris massa lobortis erat, in suscipit massa eros in tellus. Curabitur orci lectus, placerat at euismod id, lacinia a neque. Praesent pulvinar nulla velit, eu pretium velit tincidunt non. Aenean vel lacus auctor augue maximus posuere non eu tortor.</p>
+
+        <p class="par2">Nunc consectetur metus in mauris ultrices, nec consectetur est imperdiet. Donec viverra commodo nulla vitae malesuada. Sed porta vestibulum maximus. Nam imperdiet turpis et nulla dictum, a ornare urna viverra. Suspendisse potenti. Morbi venenatis non nulla vitae varius. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec dictum malesuada lorem sed faucibus. In a tellus ut nibh tempor auctor. Phasellus hendrerit imperdiet tortor, in semper nisi mattis consectetur.</p>
+
+        <p class="par3">Ut vitae nunc feugiat, convallis risus sed, laoreet eros. Suspendisse potenti. Ut efficitur sapien at ex viverra rhoncus. Etiam fringilla urna sed tortor convallis dapibus. Quisque fermentum lectus arcu, eu porta arcu fringilla nec. Duis nec tincidunt tellus. Etiam sagittis tellus eros, id sagittis neque blandit quis. Donec vitae scelerisque metus. Nulla facilisi. Morbi eleifend, eros sed molestie placerat, nisl enim malesuada elit, et sollicitudin purus augue vitae lorem. Proin vitae erat lectus. Nam hendrerit egestas tortor, porttitor tempor leo dictum vitae. Aliquam ornare eleifend quam laoreet varius. Cras pharetra turpis vitae est vehicula pulvinar.</p>
+
+        <p class="par4">Ut viverra tempus risus, a egestas est lacinia sed. Nullam eu molestie neque, nec ullamcorper metus. Duis non urna eget massa congue finibus a sit amet dolor. Maecenas elementum urna mi, viverra eleifend velit aliquam in. Vestibulum non odio eu libero porttitor bibendum. Donec ornare vulputate massa sit amet viverra. Mauris hendrerit lectus a lorem euismod convallis. Duis scelerisque dictum eleifend. Praesent interdum pretium imperdiet. Sed elementum blandit sollicitudin.</p>
+
+        <p class="par5">Nunc ut elit in est fermentum tincidunt id vel felis. Pellentesque molestie ipsum nibh, nec vehicula metus feugiat vitae. Pellentesque ac nunc non elit egestas dignissim. Nullam malesuada, lorem nec bibendum egestas, dui sapien tempus massa, faucibus imperdiet sem nulla sed ipsum. Pellentesque rhoncus, ligula ut rhoncus sodales, mauris tellus malesuada neque, in hendrerit ipsum lectus vel neque. Nulla ut efficitur orci. Pellentesque eu consequat felis, vitae lacinia turpis. Cras arcu lorem, commodo ornare pellentesque eget, ullamcorper quis metus. Nunc quis mauris faucibus, consectetur orci et, iaculis diam. Sed ut risus consectetur, sodales libero non, semper neque. Suspendisse sed elementum urna. Sed sodales eros sed tortor tristique, non ullamcorper est dictum. Nulla nibh sapien, placerat ut bibendum quis, ullamcorper ac purus. In porta sit amet ante eu tincidunt.</p>
+    </div>
+
+    <div class="task3">
+        <div class="dz">3) разобраться с параграфами, сделать спрайт с цифрами, каждая - для своего параграфа:</div>
+        <p class="two"></p>
+        <p class="zero"></p>
+        <p class="one"></p>
+        <p class="six"></p>
+    </div>
+
+    <div class="task4">
+        <div class="dz">4) нарисовать свою собственную рамочку и элемент этой рамочки:</div>
+        <p class="bord">Ut vitae nunc feugiat, convallis risus sed, laoreet eros. Suspendisse potenti. Ut efficitur sapien at ex viverra rhoncus. Etiam fringilla urna sed tortor convallis dapibus. Quisque fermentum lectus arcu, eu porta arcu fringilla nec. Duis nec tincidunt tellus. Etiam sagittis tellus eros, id sagittis neque blandit quis. Donec vitae scelerisque metus. Nulla facilisi. Morbi eleifend, eros sed molestie placerat, nisl enim malesuada elit, et sollicitudin purus augue vitae lorem. Proin vitae erat lectus. Nam hendrerit egestas tortor, porttitor tempor leo dictum vitae. Aliquam ornare eleifend quam laoreet varius. Cras pharetra turpis vitae est vehicula pulvinar.</p>
+    </div>
+
+    <div>
+        <div class="dz">5) контекстная реклама справа или слева, чтобы она прокручивалась:</div>
+        <div class="advert">Здесь могла бы быть ваша реклама!:)</div>
+    </div>
+
+    <div class="arrows">
+        <div class="dz">6) после каждой ссылки нарисовать стрелочку вправо:</div>
+        <h3>Псевдоклассы на WebReference.ru</h3>
+        <p><a href="https://webref.ru/css/type/pseudoclass">Псевдоклассы</a></p>
+        <p><a href="https://webref.ru/css/active">Псевдокласс :active</a></p>
+        <p><a href="https://webref.ru/css/hover">Псевдокласс :hover</a></p>
+        <p><a href="https://webref.ru/css/link">Псевдокласс :link</a></p>
+        <p><a href="https://webref.ru/css/visited">Псевдокласс :visited</a></p>
+        <p><a href="https://webref.ru/css/not">Псевдокласс :not</a></p>
+        <p><a href="https://webref.ru/css/first-child">Псевдокласс :first-child</a></p>
+        <p><a href="https://webref.ru/css/first-of-type">Псевдокласс :first-of-type</a></p>
+        <p><a href="hhttps://webref.ru/css/last-child">Псевдокласс :last-child</a></p>
+        <p><a href="https://webref.ru/css/last-of-type">Псевдокласс :last-of-type</a></p>
+        <p><a href="https://webref.ru/css/lang">Псевдокласс :lang</a></p>
+    </div>
+
+    </div>
+
+</body>
+</html>
