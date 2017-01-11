@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="DESCRIPTION" content="Треугольники (сontent - before, after), геометрические фигуры, свойство transform"/>
+    <meta name="KEYWORDS" content="треугольник, triangle, контент, content, before, after, облако речи, speech cloud, геометрические фигуры, geometric figures, трансформация, масштабирование, изменение размеров, вращение, сдвиг, наклон, transform"/>
+    <title>Triangles&figures&transform</title>
+    <style>
+        .wrapper {
+            margin: 0 auto;
+            width: 1024px;
+            font-family: Arial;
+        }
+        .dz {
+            font-weight: bold;
+            font-size: 110%;
+            color: blue;
+            margin: 20px;
+        }
+        td {
+            border: 1px solid grey;
+            padding: 10px 15px;
+        }
+        .tri_l {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-left: 10px solid black;
+        }
+        .tri_r {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-right: 10px solid black;
+        }
+        .tri_t {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-top: 10px solid black;
+        }
+        .tri_b {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid black;
+        }
+        .tri_lr {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-left: 10px solid black;
+            border-right: 10px solid black;
+        }
+        .tri_tb {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-top: 10px solid black;
+            border-bottom: 10px solid black;
+        }
+        .tri_tl {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-top: 10px solid black;
+            border-left: 10px solid black;
+        }
+        .tri_bl {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid black;
+            border-left: 10px solid black;
+        }
+        .tri_tr {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-top: 10px solid black;
+            border-right: 10px solid black;
+        }
+        .tri_br {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid black;
+            border-right: 10px solid black;
+        }
+        .kva {
+            width: 15px;
+            height: 15px;
+            background-color: black;
+        }
+        .kva_45 {
+            width: 15px;
+            height: 15px;
+            background-color: black;
+            transform: rotate(45deg);
+        }
+        .rect {
+            width: 25px;
+            height: 15px;
+            background-color: black;
+        }
+        .rect_45 {
+            width: 25px;
+            height: 15px;
+            background-color: black;
+            transform: rotate(45deg);
+        }
+        .rect2 {
+            width: 20px;
+            height: 15px;
+            background-color: black;
+        }
+        .kva2_red {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+        }
+        .kva2_red::after {
+            content: "";
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-left: 10px solid red;
+            display: inline-block;
+            position: relative;
+            left: 20px;
+        }
+        .kva2_blue {
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+        }
+        .kva2_blue::before {
+            content: "";
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid blue;
+            display: inline-block;
+            position: relative;
+            top: -20px;
+        }
+        .tri_r_green {
+            width: 0px;
+            height: 0px;
+            border: 10px solid transparent;
+            border-right: 10px solid green;
+            display: inline-block;
+        }
+        .kva2_green {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            display: inline-block;
+        }
+        .question {
+            background-color: lightblue;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px;
+            position: relative;
+        }
+        .question::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            bottom: 60px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid lightblue;
+        }
+        .answer {
+            background-color: lightgreen;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 30px;
+            width: 200px;
+            position: relative;
+        }
+        .answer::before {
+            content: "";
+            position: absolute;
+            left: 180px;
+            top: -20px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid lightgreen;
+        }
+        .question2 {
+            border: 1px solid blue;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px;
+            position: relative;
+        }
+        .question2::before,
+        .question2::after {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: -20px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid blue;
+        }
+        .question2::after {
+            border-bottom: 10px solid white;
+            top: -19px;
+        }
+        .answer2 {
+            background-color: lightgreen;
+            border-radius: 5px;
+            border: 1px solid green;
+            padding: 10px;
+            margin: 30px;
+            width: 200px;
+            position: relative;
+        }
+        .answer2::before,
+        .answer2::after {
+            content: "";
+            position: absolute;
+            left: 180px;
+            top: -20px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid lightgreen;
+        }
+        .answer2::before {
+            border-bottom: 10px solid green;
+            top: -20px;
+        }
+        .answer2::after {
+            border-bottom: 10px solid lightgreen;
+            top: -19px;
+        }
+        .circ {
+            width: 15px;
+            height: 15px;
+            background-color: red;
+            border-radius: 7.5px;
+            border: 1px solid red;
+        }
+        .oval {
+            width: 10px;
+            height: 15px;
+            background-color: blue;
+            border-radius: 8px/6px;
+            border: 1px solid blue;
+        }
+        .paral {
+            width: 20px;
+            height: 15px;
+            transform: skew(20deg);
+            background: green;
+        }
+        .trap {
+            border-bottom: 15px solid purple;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            height: 0;
+            width: 15px;
+        }
+        .star6 {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 20px solid red;
+            position: relative;
+        }
+        .star6::after {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid red;
+            position: absolute;
+            content: "";
+            top: 6px;
+            left: -10px;
+        }
+        .star5 {
+            margin: 10px 0;
+            position: relative;
+            display: block;
+            color: red;
+            width: 0px;
+            height: 0px;
+            border-right:  20px solid transparent;
+            border-bottom: 14px  solid blue;
+            border-left:   20px solid transparent;
+            transform: rotate(35deg);
+        }
+        .star5::before {
+            border-bottom: 16px solid blue;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -12px;
+            left: -12px;
+            display: block;
+            content: "";
+            transform: rotate(-35deg);
+        }
+        .star5::after {
+            position: absolute;
+            display: block;
+            color: red;
+            top: 0px;
+            left: -20px;
+            width: 0px;
+            height: 0px;
+            border-right: 20px solid transparent;
+            border-bottom: 14px solid blue;
+            border-left: 20px solid transparent;
+            transform: rotate(-70deg);
+            content: "";
+        }
+        .pent {
+            position: relative;
+            width: 15px;
+            border-width: 15px 5px 0;
+            border-style: solid;
+            border-color: red transparent;
+        }
+        .pent:before {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -28px;
+            left: -6px;
+            border-width: 0 13px 13px;
+            border-style: solid;
+            border-color: transparent transparent red;
+        }
+        .hex {
+            width: 20px;
+            height: 10px;
+            background: green;
+            position: relative;
+        }
+        .hex:before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 5px solid green;
+        }
+        .hex:after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 5px solid green;
+        }
+        .octa {
+            width: 24px;
+            height: 10px;
+            background: blue;
+            position: relative;
+        }
+
+        .octa:before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            left: 0;
+            border-bottom: 8px solid blue;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            width: 8px;
+            height: 0;
+        }
+
+        .octa:after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            border-top: 8px solid blue;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            width: 8px;
+            height: 0;
+        }
+        .heart {
+            position: relative;
+            width: 20px;
+            height: 18px;
+        }
+        .heart:before,
+        .heart:after {
+            position: absolute;
+            content: "";
+            left: 15px;
+            top: 0;
+            width: 15px;
+            height: 25px;
+            background: red;
+            border-radius: 10px 10px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+        .heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin :100% 100%;
+            background: red;
+        }
+        .infi {
+            position: relative;
+            width: 20px;
+            height: 10px;
+            background: transparent;
+        }
+        .infi:before,
+        .infi:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -22px;
+            width: 12px;
+            height: 12px;
+            border: 4px solid blue;
+            border-radius: 10px 10px 0 10px;
+            transform: rotate(-45deg);
+        }
+        .infi:after {
+            left: auto;
+            right: 0;
+            border-radius: 10px 10px 10px 0;
+            transform:rotate(45deg);
+            background: transparent;
+        }
+        .trans {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+        }
+        .trans_rot_plus15 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: rotate(15deg);
+        }
+        .trans_rot_minus15 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: rotate(-15deg);
+        }
+        .trans_sc_05_1 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: scale(0.5, 1);
+        }
+        .trans_sc_1_05 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: scale(1, 0.5);
+        }
+        .trans_sc_05_05 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: scale(0.5, 0.5);
+        }
+        .trans_sc_1_15 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: scale(1, 1.5);
+        }
+        .trans_sc_15_1 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: scale(1.5, 1);
+        }
+        .trans_skew_30_0 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: skew(30deg, 0deg);
+        }
+        .trans_skew_0_15 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: skew(0deg, 15deg);
+        }
+        .trans_skew_15_15 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: skew(15deg, 15deg);
+        }
+        .trans_skew_m15_m15 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: skew(-15deg, -15deg);
+        }
+        .trans_tr_15_0 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: translate(15px, 0px);
+        }
+        .trans_tr_0_5 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: translate(0px, 5px);
+        }
+        .trans_tr_15_m5 {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: translate(15px, -5px);
+        }
+        .trans_matrix {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform: matrix(-0.4, 0.6, 1, 0.4, -5, 10);
+        }
+        .trans_orig {
+            width: 120px;
+            height: 25px;
+            background-color: lightblue;
+            border: 1px solid grey;
+            text-align: center;
+            transform-origin: 10% 10%;
+            transform: rotate(10deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="task1">
+            <div class="dz">1. Нарисовать 10 разных треугольников:</div>
+            <table class="tri">
+                <tr>
+                    <td>Фигура</td>
+                    <td>Название</td>
+                    <td>Параметры</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_l"></div></td>
+                    <td>Треугольник</td>
+                    <td>border left</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_r"></div></td>
+                    <td>Треугольник</td>
+                    <td>border right</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_t"></div></td>
+                    <td>Треугольник</td>
+                    <td>border top</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_b"></div></td>
+                    <td>Треугольник</td>
+                    <td>border bottom</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_lr"></div></td>
+                    <td>Треугольники</td>
+                    <td>border left + border right</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_tb"></div></td>
+                    <td>Треугольники</td>
+                    <td>border top + border bottom</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_tl"></div></td>
+                    <td>Треугольник</td>
+                    <td>border top + border left</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_bl"></div></td>
+                    <td>Треугольник</td>
+                    <td>border left + border bottom</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_tr"></div></td>
+                    <td>Треугольник</td>
+                    <td>border top + border right</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_br"></div></td>
+                    <td>Треугольник</td>
+                    <td>border right + border bottom</td>
+                </tr>
+                <tr>
+                    <td><div class="kva"></div></td>
+                    <td>Квадрат</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><div class="kva_45"></div></td>
+                    <td>Квадрат c поворотом 45 градусов</td>
+                    <td>transform: rotate(45deg)</td>
+                </tr>
+                <tr>
+                    <td><div class="rect"></div></td>
+                    <td>Прямоугольник</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><div class="rect_45"></div></td>
+                    <td>Прямоугольник c поворотом 45 градусов</td>
+                    <td>transform: rotate(45deg)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="task2">
+            <div class="dz">2. Нарисовать квадрат, к которому прикрепить треугольники (с помощью before and after, а также с применением position absolute/relative и определить, что лучше)</div>
+            <table class="tri">
+                <tr>
+                    <td>Фигура</td>
+                    <td>Описание</td>
+                    <td>Примечания</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_b"></div><div class="rect2"></div></td>
+                    <td>Треугольник bottom + Прямоугольник </td>
+                    <td>без before-after и без position absolute/relative</td>
+                </tr>
+                <tr>
+                    <td><div class="rect2"></div><div class="tri_t"></div></td>
+                    <td>Треугольник top + Прямоугольник </td>
+                    <td>без before-after и без position absolute/relative</td>
+                </tr>
+                <tr>
+                    <td> <div class="kva2_red"></div></td>
+                    <td>Квадрат + Треугольник left </td>
+                    <td>position relative + after</td>
+                </tr>
+                <tr>
+                    <td><div class="kva2_blue"></div></td>
+                    <td>Квадрат + Треугольник top </td>
+                    <td>position relative + before</td>
+                </tr>
+                <tr>
+                    <td><div class="tri_r_green"></div><div class="kva2_green"></div></td>
+                    <td>Треугольник left + Прямоугольник </td>
+                    <td>display inline-block</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="task3">
+            <div class="dz">3. Сделать облако речи</div>
+            <div class="question">О чем бы вы хотели поговорить?</div>
+            <div class="answer">Обо всем</div>
+            <div class="question2">Разве это возможно?</div>
+            <div class="answer2">Возможно всё</div>
+        </div>
+
+        <div>
+            <div class="dz">4. Геометрические фигуры</div>
+            <table class="figures">
+                <tr>
+                    <td>Фигура</td>
+                    <td>Название</td>
+                    <td>Параметры</td>
+                </tr>
+                <tr>
+                    <td><div class="circ"></td>
+                    <td>Круг</td>
+                    <td>border-radius + border</td>
+                </tr>
+                <tr>
+                    <td><div class="oval"></div></td>
+                    <td>Овал</td>
+                    <td>border-radius + border</td>
+                </tr>
+                <tr>
+                    <td><div class="paral"></div></td>
+                    <td>Параллелограмм</td>
+                    <td>transform: skew(20deg)</td>
+                </tr>
+                <tr>
+                    <td><div class="trap"></div></td>
+                    <td>Трапеция</td>
+                    <td>border-bottom + border-left transparent + border-right transparent</td>
+                </tr>
+                <tr>
+                    <td><div class="star6"></div></td>
+                    <td>Звезда 6</td>
+                    <td>border-left transparent, border-right transparent, border-bottom, relative<br> + after (border-left transparent, border-right transparent, border-top, absolute)
+                    </td>
+                </tr>
+                <tr>
+                    <td><div class="star5"></div></td>
+                    <td>Звезда 5</td>
+                    <td>relative, border-right transparent, border-bottom, border-left transparent, rotate 35deg<br>+ before (border-bottom, border-left transparent, border-right transparent, absolute, rotate -35deg)<br>+ after (absolute, border-right transparent, border-bottom, border-left transparent, rotate -70deg)</td>
+                </tr>
+                <tr>
+                    <td><div class="pent"></div></td>
+                    <td>Пятиугольник</td>
+                    <td>relative, border-width 1 1, border-color: 1color 1transparent<br>
+                    + before (absolute, border-width 0 1 1, border-color transparent0 transparent1 color1)
+                    </td>
+                </tr>
+                <tr>
+                    <td><div class="hex"></div></td>
+                    <td>Шестиугольник</td>
+                    <td>relative + before (absolute, border-left transparent, border-right transparent, border-bottom</td>
+                </tr>
+                <tr>
+                    <td><div class="octa"></div></td>
+                    <td>Восьмиугольник</td>
+                    <td>relative + before (absolute, border-bottom,
+                     border-left transparent, border-right transparent)<br> + after (absolute, border-top, border-left: transparent, border-right: transparent)</td>
+                </tr>
+                <tr>
+                    <td><div class="heart"></div></td>
+                    <td>Сердечко</td>
+                    <td>relative + before, after (absolute, border-radius: px px 0 0, rotate(-45deg), transform-origin: 0 100%)<br> + after (rotate(45deg), transform-origin :100% 100%)</td>
+                </tr>
+                <tr>
+                    <td><div class="infi"></div></td>
+                    <td>Бесконечность</td>
+                    <td>relative, background transparent<br> + before, after (absolute, border,          border-radius: px px 0 px, rotate(-45deg))<br> + after (border-radius: px px px 0, rotate(45deg), background transparent)</td>
+                </tr>
+            </table>
+        </div>
+
+         <div>
+            <div class="dz">5. Cвойство transform</div>
+            <table class="figures">
+                <tr>
+                    <td>Изображение</td>
+                    <td>Параметры</td>
+                    <td>Примечания</td>
+                </tr>
+                <tr>
+                    <td><div class="trans">transform:</div></td>
+                    <td>none</td>
+                    <td>исходное изображение</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_rot_plus15">transform:</div></td>
+                    <td>rotate(15deg)</td>
+                    <td>поворот по часовой стрелке на 15 град</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_rot_minus15">transform:</div></td>
+                    <td>rotate(-15deg)</td>
+                    <td>поворот против часовой стрелки на 15 град</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_sc_05_1">transform:</div></td>
+                    <td>scale (0.5, 1)</td>
+                    <td>уменьшение на 50% по горизонтали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_sc_1_05">transform:</div></td>
+                    <td>scale (1, 0.5)</td>
+                    <td>уменьшение на 50% по вертикали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_sc_05_05">transform:</div></td>
+                    <td>scale (0.5, 0.5)</td>
+                    <td>уменьшение на 50% по горизонтали и вертикали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_sc_1_15">transform:</div></td>
+                    <td>scale (1, 1.5)</td>
+                    <td>увеличение на 50% по вертикали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_sc_15_1">transform:</div></td>
+                    <td>scale (1.5, 1)</td>
+                    <td>увеличение на 50% по горизонтали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_skew_30_0">transform:</div></td>
+                    <td>skew (30, 0)</td>
+                    <td>наклон на 30 град по горизонтали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_skew_0_15">transform:</div></td>
+                    <td>skew (0, 15)</td>
+                    <td>наклон на 15 град по вертикали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_skew_15_15">transform:</div></td>
+                    <td>skew (15, 15)</td>
+                    <td>наклон на 15 град по горизонтали и вертикали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_skew_m15_m15">transform:</div></td>
+                    <td>skew (-15, -15)</td>
+                    <td>наклон на -15 град по горизонтали и вертикали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_tr_15_0">transform:</div></td>
+                    <td>translate (15рх, 0px)</td>
+                    <td>cмещение на 15рх по горизонтали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_tr_0_5">transform:</div></td>
+                    <td>translate (0рх, 5px)</td>
+                    <td>cмещение на 5рх по вертикали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_tr_15_m5">transform:</div></td>
+                    <td>translate (15рх, -5px)</td>
+                    <td>cмещение на 15px по горизонтали и -5рх по вертикали</td>
+                </tr>
+                <tr>
+                    <td><div class="trans_matrix">transform:</div></td>
+                    <td>matrix<br>(scale, skewY, skewX, scaleY, translateX, translateY);</td>
+                    <td>уменьшение масштаба по горизонтали scale -0.4,<br> наклон по горизонтали skewY 0.6,<br> наклон по вертикали skewX 1,<br> меньшение масштаба по вертикали scaleY 0.4,<br> смещение по горизонтали translateX -5px,<br> смещение по вертикали translateY 10px</td>
+                </tr>
+                 <tr>
+                    <td><div class="trans_orig">transform:</div></td>
+                    <td>transform-origin (x, у, z),<br> для х: px % left center right,<br> для у: px % top center bottom,<br> для z: px</td>
+                    <td>координаты точки, относительно которой будет происходить трансформация элемента (смещение 10% по х, смещение 10% по y при rotate 10 град) </td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div>
+            <ol>References:
+                <li>Конспект</li>
+                <li>http://htmlbook.ru/blog/treugolniki-cherez-css</li>
+                <li>https://habrahabr.ru/post/126207/</li>
+                <li>http://ktvd.ru/triangles-on-css/</li>
+                <li>http://shpargalkablog.ru/2011/09/transform-css.html</li>
+                <li>http://htmlbook.ru/blog/matritsa-preobrazovanii</li>
+                <li>http://htmlbook.ru/css/transform-origin</li>
+            </ol>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
